@@ -5,7 +5,7 @@ module.exports = {
     // devtools: true
   },
   server: {
-    command: `node server.js`,
+    command: `RECORD_API=${process.env.RECORD_API} node server.js`,
     port: 9000,
     launchTimeout: 10000,
     debug: true,

@@ -8,11 +8,15 @@
     "@testing-library/user-event": "^7.1.2",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
+    "http-proxy-middleware": "^1.0.4",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "talkback": "^2.1.1",
     "urql": "^1.9.7"
   },
   "scripts": {
@@ -36,9 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "jest-puppeteer": "^4.4.0",
-    "puppeteer": "^3.1.0"
   }
 }

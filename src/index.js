@@ -9,8 +9,8 @@ import { Provider, Client, defaultExchanges } from 'urql';
 import { BrowserRouter } from 'react-router-dom'
 
 const client = new Client({
-  // url: 'http://localhost:4000',
-  url: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_bk/default',
+  url: 'http://localhost:5544/',
+  // url: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_bk/default',
   exchanges: defaultExchanges
 })
 
