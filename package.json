@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@pollyjs/adapter-puppeteer": "^4.3.0",
+    "@pollyjs/core": "^4.3.0",
+    "@pollyjs/persister-fs": "^4.3.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "graphql": "^15.0.0",
     "graphql-tag": "^2.10.3",
-    "http-proxy-middleware": "^1.0.4",
     "jest-puppeteer": "^4.4.0",
     "puppeteer": "^3.1.0",
     "react": "^16.13.1",
@@ -16,14 +18,18 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "setup-polly-jest": "^0.7.0",
     "talkback": "^2.1.1",
     "urql": "^1.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:talkback": "REACT_APP_RECORD_TYPE=talkback react-scripts build",
+    "build:polly": "REACT_APP_RECORD_TYPE=polly react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "test:integration": "jest -c integration/jest.config.js",
+    "test:integration:talkback": "RECORD_TYPE=talkback jest -c integration/jest.talkback.config.js",
+    "test:integration:talkback:record": "RECORD_API=true RECORD_TYPE=talkback jest -c integration/jest.talkback.config.js",
+    "test:integration:polly": "RECORD_TYPE=polly jest -c integration/jest.polly.config.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

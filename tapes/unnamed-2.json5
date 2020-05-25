@@ -1,6 +1,6 @@
 {
     meta: {
-        createdAt: '2020-05-24T06:25:52.179Z',
+        createdAt: '2020-05-25T01:40:40.797Z',
         host: 'https://czqk28jt.apicdn.sanity.io/v1/graphql/prod_bk/default',
         reqHumanReadable: true,
         resHumanReadable: true,
@@ -11,7 +11,7 @@
         method: 'POST',
         headers: {
             connection: 'keep-alive',
-            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.0 Safari/537.36',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.0 Safari/537.36',
             'content-type': 'application/json',
             accept: '*/*',
             origin: 'http://localhost:9000',
@@ -20,6 +20,7 @@
             'sec-fetch-dest': 'empty',
             referer: 'http://localhost:9000/',
             'accept-encoding': 'gzip, deflate, br',
+            'accept-language': 'en-US,en;q=0.9',
         },
         body: {
             query: '{\n  allStaticPages {\n    _id\n    path {\n      current\n      __typename\n    }\n    title\n    __typename\n  }\n}\n',
@@ -33,7 +34,7 @@
                 'application/json; charset=utf-8',
             ],
             date: [
-                'Sun, 24 May 2020 06:25:52 GMT',
+                'Mon, 25 May 2020 01:40:41 GMT',
             ],
             'access-control-allow-origin': [
                 'http://localhost:9000',
@@ -63,7 +64,7 @@
                 '0',
             ],
             'x-varnish-grace': [
-                '',
+                'miss',
             ],
             'accept-ranges': [
                 'bytes',
