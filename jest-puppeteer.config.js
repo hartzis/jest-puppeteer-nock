@@ -2,7 +2,7 @@ module.exports = {
   browserContext: 'incognito',
   launch: {
     headless: process.env.HEADLESS !== 'false',
-    // devtools: true
+    devtools: true
   },
   server: {
     command: `RECORD_API=${process.env.RECORD_API} RECORD_TYPE=${process.env.RECORD_TYPE} node server.js`,

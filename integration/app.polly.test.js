@@ -12,6 +12,7 @@ describe('app polly test', () => {
   // NOTE: `context.polly` is not accessible until the jasmine/jest hook `before`
   // is called. This means it's not accessible in the same tick here. Worth mentioning
   // since it trolled me while debugging.
+
   const context = setupPolly({
     adapters: ['puppeteer'],
     // NOTE: `page` is set by jest.config.js preset "jest-puppeteer"
@@ -23,9 +24,12 @@ describe('app polly test', () => {
       }
     },
     matchRequestsBy: {
-      headers: {
-        exclude: ['user-agent']
-      }
+      // headers: {
+      //   exclude: ['user-agent']
+      // }
+      headers: false,
+      order: false,
+      body: false
     }
   });
 
@@ -34,10 +38,21 @@ describe('app polly test', () => {
 
     await page.setRequestInterception(true);
 
-    const { server } = context.polly;
 
-    // server.host('http://localhost:3000', () => {
-    //   server.get('/sockjs-node/*').intercept((_, res) => res.sendStatus(200));
+    const { server } = context.polly;
+    context.polly.configure({mode: 'replay'})
+
+    // page.on('request', (req)=>{
+    //   console.log('fuckkk---', req)
+    // })
+
+    // server.host('https://czqk28jt.apicdn.sanity.io', () => {
+    //   server.post('*').intercept((req, res) => {
+    //     console.log('fuuuckkkk', req)
+    //     console.log('fuuuckkkk2', req.identifiers)
+    //     // res.jsonBody("{}");
+    //     return res.sendStatus(200);
+    //   });
     // });
 
     await page.goto('http://localhost:9000', { waitUntil: 'networkidle0' });
@@ -48,9 +63,10 @@ describe('app polly test', () => {
   });
 
   it('should display a title', async () => {
+    // await jestPuppeteer.debug();
     await page.waitForSelector('p');
     await expect(page).toMatch('Test jest-puppeteer-nock with urql')
-  }, 5000)
+  }, 60000)
 
   it('should click first link and be on that links page', async () => {
     await page.waitForSelector('[data-testid="list"]');
@@ -59,6 +75,6 @@ describe('app polly test', () => {
       page.click('[data-testid="link"] a'),
     ]);
     await expect(page).toMatch('This is the main page for Trademarks')
-  }, 5000)
+  }, 60000)
 
 });
