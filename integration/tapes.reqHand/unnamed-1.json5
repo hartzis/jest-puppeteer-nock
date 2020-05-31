@@ -1,0 +1,72 @@
+{
+    meta: {
+        createdAt: '2020-05-30T17:32:46.932Z',
+        host: 'https://czqk28jt.apicdn.sanity.io',
+    },
+    req: {
+        url: '/v1/graphql/prod_bk/default',
+        method: 'OPTIONS',
+        headers: {
+            accept: '*/*',
+            'access-control-request-method': 'POST',
+            'access-control-request-headers': 'content-type',
+            origin: 'http://localhost:9000',
+            'sec-fetch-mode': 'cors',
+        },
+        body: '',
+    },
+    res: {
+        status: 204,
+        headers: {
+            date: [
+                'Sat, 30 May 2020 17:32:47 GMT',
+            ],
+            vary: [
+                'Origin',
+            ],
+            'access-control-allow-origin': [
+                'http://localhost:9000',
+            ],
+            'access-control-expose-headers': [
+                'Content-Type, Content-Length, ETag, X-Sanity-Deprecated, X-Sanity-Warning',
+            ],
+            'access-control-max-age': [
+                '600',
+            ],
+            'access-control-allow-credentials': [
+                'true',
+            ],
+            'access-control-allow-headers': [
+                'content-type',
+            ],
+            'access-control-allow-methods': [
+                'POST',
+            ],
+            server: [
+                'kong/0.11.2',
+            ],
+            'cache-control': [
+                'public, max-age=15',
+            ],
+            'alt-svc': [
+                'clear, clear',
+            ],
+            'x-varnish-beresp-ttl': [
+                '15.000',
+            ],
+            'x-varnish-age': [
+                '0',
+            ],
+            'x-varnish-grace': [
+                'miss',
+            ],
+            via: [
+                '1.1 google',
+            ],
+            connection: [
+                'close',
+            ],
+        },
+        body: '',
+    },
+}

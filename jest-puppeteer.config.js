@@ -1,7 +1,8 @@
 module.exports = {
-  browserContext: 'incognito',
+  // browserContext: 'incognito',
   launch: {
-    headless: process.env.HEADLESS !== 'false',
+    // headless: process.env.HEADLESS !== 'false',
+    headless: false,
     devtools: true
   },
   server: {

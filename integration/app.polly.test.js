@@ -43,13 +43,13 @@ describe('app polly test', () => {
     context.polly.configure({mode: 'replay'})
 
     // page.on('request', (req)=>{
-    //   console.log('fuckkk---', req)
+    //   console.log('REQQQQQ---', req)
     // })
 
     // server.host('https://czqk28jt.apicdn.sanity.io', () => {
     //   server.post('*').intercept((req, res) => {
-    //     console.log('fuuuckkkk', req)
-    //     console.log('fuuuckkkk2', req.identifiers)
+    //     console.log('REQQQQQ', req)
+    //     console.log('REQQQQQ--IDs', req.identifiers)
     //     // res.jsonBody("{}");
     //     return res.sendStatus(200);
     //   });
